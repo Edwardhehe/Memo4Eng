@@ -1,14 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="Controller.MainMemoController"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane prefHeight="600" prefWidth="850" xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.MainMemoController">
+    <children>
+        <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="850.0" AnchorPane.bottomAnchor="575.0"
+                 AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="文件">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="导出指定时间内的工作"/>
+                        <MenuItem mnemonicParsing="false" text="数据文件另存为"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="设置">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="设置主文件夹位置"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="帮助">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="帮助"/>
+                        <MenuItem mnemonicParsing="false" text="关于"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <Pane layoutX="7.0" layoutY="25.0" prefHeight="575.0" prefWidth="850.0" AnchorPane.bottomAnchor="0.0"
+              AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <TableView prefHeight="575.0" prefWidth="850.0" tableMenuButtonVisible="true">
+                    <columns>
+                        <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="创建日期"/>
+                        <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="期望完成时间"/>
+                        <TableColumn maxWidth="90.0" minWidth="90.0" prefWidth="90.0" text="实际完成时间"/>
+                        <TableColumn prefWidth="300.0" text="项目名称"/>
+                        <TableColumn minWidth="0.0" prefWidth="100.0" text="项目编号"/>
+                        <TableColumn minWidth="90.0" prefWidth="90.0" text="工作类型"/>
+                        <TableColumn minWidth="0.0" prefWidth="60.0" text="是否完成"/>
+                    </columns>
+                </TableView>
+            </children>
+        </Pane>
+    </children>
 </AnchorPane>

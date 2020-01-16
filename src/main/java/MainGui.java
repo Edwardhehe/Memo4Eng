@@ -11,7 +11,7 @@ public class MainGui extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("/fxml/MainWindow.fxml"));
 
         Scene scene = new Scene(root);
-        stage.setTitle("欢迎使用MPDF");
+        stage.setTitle("");
         stage.setScene(scene);
         stage.setResizable(false);
         stage.show();
